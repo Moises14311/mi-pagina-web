@@ -197,7 +197,7 @@ body {
 
 .section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .section-header h3 {
@@ -250,38 +250,80 @@ body {
   font-size: 0.95rem;
 }
 
-/* Añadir estas nuevas reglas */
+/* Estilos para la sección de certificaciones */
 .certifications-section {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: var(--technical-gray);
 }
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  gap: 1.5rem; /* Espacio entre tarjetas */
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .certification-card {
   background: white;
   border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  max-width: 100%;
 }
 
-.certification-card img {
-  width: 80px;
-  height: auto;
+/* Aquí es donde debes agregar los nuevos estilos para el logo */
+.certification-logo {
+  width: 120px; /* Tamaño del contenedor del logo */
+  height: 80px; /* Tamaño del contenedor del logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.1rem; /* Espacio debajo del logo */
+}
+
+.certification-logo img {
+  width: 100%; /* La imagen ocupa todo el espacio del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Opcional: Bordes redondeados para la imagen */
+}
+
+/* Estilos para la información de la certificación */
+.certification-info {
+  text-align: center;
 }
 
 .certification-info h4 {
   color: var(--deep-blue);
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.certification-info p {
+  color: var(--executive-black);
+  opacity: 0.8;
+  font-size: 0.85rem; /* Texto más pequeño */
+  margin-bottom: 0.5rem;
+}
+
+.certification-info .certification-id {
+  font-weight: 600;
+  color: var(--certification-blue);
+  font-size: 0.9rem; /* Texto más pequeño */
+}
+
+.certification-info .certification-validity {
+  font-size: 0.75rem; /* Texto más pequeño */
+  color: var(--executive-black);
+  opacity: 0.7;
 }
 
 /* Mejoras de responsive */
@@ -513,6 +555,11 @@ body {
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
+
+  /* Nuevos estilos para certificaciones en tablets */
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
@@ -532,5 +579,23 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+  }
+
+  /* Nuevos estilos para certificaciones en móviles */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-card {
+    padding: 1rem; /* Más compacto en móviles */
+  }
+
+  .certification-logo {
+    width: 60px; /* Logo más pequeño en móviles */
+    height: 60px;
+  }
+
+  .certification-info h4 {
+    font-size: 1.1rem; /* Texto más pequeño en móviles */
   }
 }
