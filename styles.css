@@ -74,6 +74,7 @@ body {
   opacity: 0.8;
 }
 
+/* Mejoras para el menú de navegación */
 .nav-menu {
   display: flex;
   gap: 2.5rem;
@@ -86,11 +87,33 @@ body {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
+  font-size: 1.1rem; /* Tamaño de fuente más grande */
+  font-weight: 500; /* Texto un poco más grueso */
+  padding: 0.5rem 0; /* Espaciado interno */
 }
 
 .nav-menu a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-gold); /* Color dorado al hacer hover */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.nav-menu a i {
+  font-size: 1.2rem; /* Tamaño de los íconos */
+}
+
+/* Subrayado al hacer hover */
+.nav-menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+  width: 100%; /* Subrayado completo al hacer hover */
 }
 
 .mobile-menu {
@@ -114,16 +137,11 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   padding: 0 2rem;
+  margin-top: 4rem; /* Mover el bloque completo hacia abajo */
 }
 
-.accreditation-badge {
-  background: rgba(255,255,255,0.1);
-  padding: 1.5rem;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
+.hero-content {
+  margin-top: 0; /* Restablecer margen superior */
 }
 
 .hero-content h2 {
@@ -280,7 +298,6 @@ body {
   max-width: 100%;
 }
 
-/* Aquí es donde debes agregar los nuevos estilos para el logo */
 .certification-logo {
   width: 120px; /* Tamaño del contenedor del logo */
   height: 80px; /* Tamaño del contenedor del logo */
@@ -296,7 +313,6 @@ body {
   border-radius: 8px; /* Opcional: Bordes redondeados para la imagen */
 }
 
-/* Estilos para la información de la certificación */
 .certification-info {
   text-align: center;
 }
@@ -364,6 +380,11 @@ body {
   .contact-form {
     padding: 1.5rem;
   }
+
+  /* Nuevos estilos para certificaciones en tablets */
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
@@ -373,12 +394,6 @@ body {
   
   .hero-content h2 {
     font-size: 1.8rem;
-  }
-  
-  .accreditation-badge {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
   }
   
   .brand-text h1 {
@@ -392,6 +407,24 @@ body {
   .certification-card {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Nuevos estilos para certificaciones en móviles */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-card {
+    padding: 1rem; /* Más compacto en móviles */
+  }
+
+  .certification-logo {
+    width: 60px; /* Logo más pequeño en móviles */
+    height: 60px;
+  }
+
+  .certification-info h4 {
+    font-size: 1.1rem; /* Texto más pequeño en móviles */
   }
 }
 
@@ -555,11 +588,6 @@ body {
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
-
-  /* Nuevos estilos para certificaciones en tablets */
-  .certifications-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 480px) {
@@ -579,23 +607,5 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-  }
-
-  /* Nuevos estilos para certificaciones en móviles */
-  .certifications-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .certification-card {
-    padding: 1rem; /* Más compacto en móviles */
-  }
-
-  .certification-logo {
-    width: 60px; /* Logo más pequeño en móviles */
-    height: 60px;
-  }
-
-  .certification-info h4 {
-    font-size: 1.1rem; /* Texto más pequeño en móviles */
   }
 }
