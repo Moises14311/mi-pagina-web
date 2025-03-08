@@ -237,25 +237,31 @@ body {
 .service-card {
   background: white;
   border: 1px solid var(--technical-gray);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 2rem;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .card-header i {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: var(--certification-blue);
+  margin-bottom: 1rem;
+}
+
+.card-header h4 {
+  font-size: 1.5rem;
+  color: var(--deep-blue);
+  margin-bottom: 0.5rem;
 }
 
 .service-specs {
@@ -266,6 +272,25 @@ body {
   padding: 0.8rem 0;
   border-bottom: 1px solid var(--technical-gray);
   font-size: 0.95rem;
+}
+
+.service-specs {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.service-specs li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--technical-gray);
+  font-size: 0.95rem;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: var(--executive-black);
+  opacity: 0.8;
+  text-align: left;
 }
 
 /* Estilos para la sección de certificaciones */
