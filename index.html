@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
+  <title>Moisés Uribe | Topografía y Fotogrametría Profesional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <nav class="nav-container">
+      <div class="branding">
+        <div class="logo-mark"></div>
+        <div class="brand-text">
+          <h1>Moisés Uribe B</h1>
+          <p>Topógrafo</p>
+          <p>Piloto Certificado UAS</p>
+          <p>S.M.S - Gestión de Seguridad Operacional</p>
+          <p>BVLOS - Operacion mas alla de la Linea de Vista</p>
+        </div>
+      </div>
+      <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+      <ul class="nav-menu">
+        <li><a href="#services"><i class="fas fa-project-diagram"></i> Servicios</a></li>
+        <li><a href="#certifications"><i class="fas fa-certificate"></i> Certificaciones</a></li>
+        <li><a href="#clients"><i class="fas fa-building"></i> Clientes</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="executive-hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h2>Ingeniería de Precisión con Tecnología UAV</h2>
+        <div class="hero-divider"></div>
+        <p class="hero-statement">
+          <span class="highlight">+8 Años</span> Ejecutando levantamientos Topográficos certificados, mediante tecnologias de vanguardia.
+        </p>
+      </div>
+      <div class="hero-technical">
+        <div class="spec-grid">
+          <div class="spec-card">
+            <div class="spec-icon"><i class="fas fa-crosshairs"></i></div>
+            <div class="spec-data">
+              <span class="spec-value">Precision ±1.5 cm/horizontal</span>
+              <span class="spec-label">RTK/PPK</span>
+            </div>
+          </div>
+          <div class="spec-card">
+            <div class="spec-icon"><i class="fas fa-map"></i></div>
+            <div class="spec-data">
+              <span class="spec-value">300 ha/día</span>
+              <span class="spec-label">Cobertura VLOS EVLOS BVLOS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="services" class="executive-services">
+    <div class="section-container">
+      <div class="section-header">
+        <h3>Servicios Técnicos</h3>
+        <p class="section-subtitle">Tecnología y precisión al servicio de tus proyectos</p>
+      </div>
+      <div class="services-grid">
+        <!-- Tarjeta 1: Fotogrametría UAV -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-helicopter card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Levantamientos Fotogramétricos UAV</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <ul class="service-specs">
+              <li>Ortofotos</li>
+              <li>Modelos Digitales de Superficie (MDS)</li>
+              <li>Modelos Digitales del Terreno (MDT)</li>
+              <li>Nube de Puntos</li>
+              <li>Curvas de Nivel</li>
+              <li>Mapas de Índices de Vegetación (NDVI, NDRE, etc.)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Englobes y Desenglobes -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-map-marked-alt card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Actualizaciones Catastrales</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <ul class="service-specs">
+              <li>Fotogrametría y Teledetección con UAV (Drones) </li>
+              <li>Levantamientos Topográficos y Geodésicos </li>
+              <li>Actualización de Linderos y Colindancias </li>
+              <li>Englobes Prediales</li>
+              <li>Desenglobes Prediales</li>
+              <li>Consultoría y Asesoría Técnica</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Inspecciones Industriales -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-hard-hat card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Inspecciones Industriales y de Infraestructura UAV</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Inspecciones detalladas y precisas para infraestructuras críticas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Agricultura de Precisión -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-tractor card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Agricultura de Precisión</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Optimización de cultivos mediante análisis multiespectral y térmico.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5: Servicios Audiovisuales -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-video card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Servicios Audiovisuales</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Producción de videos aéreos y fotografía profesional.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6: Monitoreo UAV continuo -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-eye card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Monitoreo UAV continuo</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Monitoreo en tiempo real para proyectos de larga duración.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 7: Procesamiento de Información -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-brain card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Procesamiento de Información</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <ul class="service-specs">
+              <li>Fotogrametría</li>
+              <li>Topografía</li>
+              <li>Geodesia con IA</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta 8: Redes GNSS de alta precisión -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-satellite card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Redes GNSS de alta precisión</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Implementación de redes GNSS para mediciones precisas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 9: Consultorías y Asesoría -->
+        <div class="service-card" onclick="toggleCard(this)">
+          <i class="fas fa-chalkboard-teacher card-icon"></i>
+          <div class="card-header">
+            <h3 class="card-title">Consultorías y Asesoría</h3>
+            <div class="card-toggle">+</div>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Asesoría especializada en proyectos UAV y topografía.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Certificaciones -->
+  <section id="certifications" class="certifications-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h3>Certificaciones</h3>
+        <p class="section-subtitle">Acreditaciones profesionales vigentes</p>
+      </div>
+      <div class="certifications-grid">
+        <!-- Certificación 1 -->
+        <div class="certification-card">
+          <div class="certification-logo">
+            <img src="assets/icons/diploma_uas.png" alt="Certificación UAEAC" loading="lazy">
+          </div>
+          <div class="certification-info">
+            <h4>Piloto Operaciones RPAS</h4>
+            <p class="certification-validity">Certificado de Funcionamiento No. UAEAC-CC 049</p>
+          </div>
+        </div>
+
+        <!-- Certificación 2 -->
+        <div class="certification-card">
+          <div class="certification-logo">
+            <img src="assets/icons/uaeac-certified.png" alt="Certificación UAEAC" loading="lazy">
+          </div>
+          <div class="certification-info">
+            <h4>Certificado de Idoneidad Piloto UAS</h4>
+            <p class="certification-id">Registro CIPU-100-24-0052</p>
+          </div>
+        </div>
+
+        <!-- Certificación 3 -->
+        <div class="certification-card">
+          <div class="certification-logo">
+            <img src="assets/icons/uaeac-certified.png" alt="Certificación UAEAC" loading="lazy">
+          </div>
+          <div class="certification-info">
+            <h4>Certificado de Idoneidad Piloto UAS</h4>
+            <p class="certification-id">Registro CIPU-100-24-0052</p>
+          </div>
+        </div>
+        <!-- Certificación 4 -->
+        <div class="certification-card">
+          <div class="certification-logo">
+            <img src="assets/icons/uaeac-certified.png" alt="Certificación UAEAC" loading="lazy">
+          </div>
+          <div class="certification-info">
+            <h4>Certificado de Idoneidad Piloto UAS</h4>
+            <p class="certification-id">Registro CIPU-100-24-0052</p>
+          </div>
+        </div>
+
+        <!-- Certificación 5 -->
+        <div class="certification-card">
+          <div class="certification-logo">
+            <img src="assets/icons/uaeac-certified.png" alt="Certificación UAEAC" loading="lazy">
+          </div>
+          <div class="certification-info">
+            <h4>Certificado de Idoneidad Piloto UAS</h4>
+            <p class="certification-id">Registro CIPU-100-24-0052</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clientes -->
+  <section id="clients" class="clients-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h3>Desarrollo de proyectos en las siguientes Empresas</h3>
+        <p class="section-subtitle">Empresas que confían en nuestro trabajo</p>
+      </div>
+      <div class="clients-grid">
+        <div class="client-item">
+          <img src="assets/logos/ecopetrol.svg" alt="Ecopetrol" loading="lazy">
+        </div>
+        <div class="client-item">
+          <img src="assets/logos/ODL.png" alt="ODL" loading="lazy">
+        </div>
+        <div class="client-item">
+          <img src="assets/logos/cenit.png" alt="CENIT" loading="lazy">
+        </div>
+        <div class="client-item">
+          <img src="assets/logos/epm.svg" alt="EPM" loading="lazy">
+        </div>
+        <div class="client-item">
+          <img src="assets/logos/drummond.png" alt="Drummond" loading="lazy">
+        </div>
+        <!-- Más clientes -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="info-card">
+            <h4>Contacto Directo</h4>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Bogotá, Colombia</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>+57 313 5894563</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>todofly75@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Descripción del proyecto</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">
+            <i class="fas fa-paper-plane"></i> Enviar consulta
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="executive-footer">
+    <div class="footer-container">
+      <div class="footer-legal">
+        <div class="legal-info">
+          <p>&copy; 2024 Moisés Uribe Topografía UAV</p>
+          <p>CIPU-100-24-0051 | Registro UAEAC</p>
+        </div>
+        <div class="footer-badges">
+          <img src="assets/logos/uaeac-badge.png" alt="Certificación UAEAC" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón de WhatsApp -->
+  <a href="https://wa.me/573135894563" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
