@@ -1,0 +1,744 @@
+:root {
+  --executive-black: #1A1D21;
+  --deep-blue: #2A3B4D;
+  --accent-gold: #C5A47E;
+  --technical-gray: #E4E4E4;
+  --certification-blue: #3E5F8A;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--executive-black);
+  background: #FAFAFA;
+}
+
+/* Header */
+.main-header {
+  background: var(--executive-black);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-mark {
+  width: 45px;
+  height: 45px;
+  background: var(--accent-gold);
+  border-radius: 8px;
+  position: relative;
+}
+
+.logo-mark::after {
+  content: "MU";
+  position: absolute;
+  color: var(--executive-black);
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.brand-text h1 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.brand-text p {
+  color: var(--technical-gray);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Mejoras para el menú de navegación */
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: var(--technical-gray);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.3s, transform 0.3s;
+  font-size: 1.1rem; /* Tamaño de fuente más grande */
+  font-weight: 500; /* Texto un poco más grueso */
+  padding: 0.5rem 0; /* Espaciado interno */
+}
+
+.nav-menu a:hover {
+  color: var(--accent-gold); /* Color dorado al hacer hover */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.nav-menu a i {
+  font-size: 1.2rem; /* Tamaño de los íconos */
+}
+
+/* Subrayado al hacer hover */
+.nav-menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+  width: 100%; /* Subrayado completo al hacer hover */
+}
+
+.mobile-menu {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.executive-hero {
+  background: linear-gradient(to right, var(--executive-black) 40%, var(--deep-blue) 100%);
+  color: white;
+  padding: 8rem 0 4rem;
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0 2rem;
+  margin-top: 4rem; /* Mover el bloque completo hacia abajo */
+}
+
+.hero-content {
+  margin-top: 0; /* Restablecer margen superior */
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--accent-gold);
+  margin: 2rem 0;
+}
+
+.hero-statement {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.highlight {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* Especificaciones Técnicas */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.spec-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.spec-icon {
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+}
+
+.spec-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.spec-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Servicios */
+.executive-services {
+  padding: 6rem 0;
+  background: white;
+}
+
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--deep-blue);
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Estilo de las tarjetas */
+.service-card {
+  background: white;
+  border: 1px solid #E4E4E4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden; /* Para ocultar el contenido expandido */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Icono y título */
+.card-icon {
+  font-size: 2.5rem; /* Tamaño original */
+  color: #3E5F8A; /* Color original */
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1.5rem; /* Tamaño original */
+  color: #2A3B4D; /* Color original */
+  margin: 0;
+  font-weight: 600; /* Peso de la fuente original */
+}
+
+/* Botón de "+" */
+.card-toggle {
+  font-size: 1.5rem;
+  color: #3E5F8A; /* Color original */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-card.active .card-toggle {
+  transform: rotate(45deg);
+}
+
+/* Contenido expandible */
+.service-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.service-card.active .service-content {
+  max-height: 500px; /* Ajusta según el contenido */
+  margin-top: 1rem;
+}
+
+/* Lista de especificaciones */
+.service-specs {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.service-specs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem; /* Tamaño original */
+}
+
+.service-detail-toggle {
+  background: none;
+  border: none;
+  color: #3E5F8A;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.service-detail-toggle:hover {
+  color: #C5A47E;
+}
+
+/* Animación de fade-in para el modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out; /* Aplicar la animación */
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out; /* Aplicar la animación al contenido */
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1A1D21;
+}
+
+.close-modal:hover {
+  color: #C5A47E;
+}
+
+#modalTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2A3B4D;
+}
+
+#modalDescription {
+  font-size: 1rem;
+  color: #1A1D21;
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de certificaciones */
+.certifications-section {
+  padding: 2rem 0;
+  background: var(--technical-gray);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  gap: 1.5rem; /* Espacio entre tarjetas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.certification-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  max-width: 100%;
+}
+
+.certification-logo {
+  width: 120px; /* Tamaño del contenedor del logo */
+  height: 80px; /* Tamaño del contenedor del logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.1rem; /* Espacio debajo del logo */
+}
+
+.certification-logo img {
+  width: 100%; /* La imagen ocupa todo el espacio del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Opcional: Bordes redondeados para la imagen */
+}
+
+.certification-info {
+  text-align: center;
+}
+
+.certification-info h4 {
+  color: var(--deep-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.certification-info p {
+  color: var(--executive-black);
+  opacity: 0.8;
+  font-size: 0.85rem; /* Texto más pequeño */
+  margin-bottom: 0.5rem;
+}
+
+.certification-info .certification-id {
+  font-weight: 600;
+  color: var(--certification-blue);
+  font-size: 0.9rem; /* Texto más pequeño */
+}
+
+.certification-info .certification-validity {
+  font-size: 0.75rem; /* Texto más pequeño */
+  color: var(--executive-black);
+  opacity: 0.7;
+}
+
+/* Mejoras de responsive */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .spec-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  
+  .spec-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav-menu {
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-menu.show {
+    transform: translateX(0);
+  }
+  
+  .mobile-menu {
+    z-index: 1001;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  /* Nuevos estilos para certificaciones en tablets */
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .brand-text h1 {
+    font-size: 1.2rem;
+  }
+  
+  .client-item {
+    padding: 1rem;
+  }
+  
+  .certification-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Nuevos estilos para certificaciones en móviles */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-card {
+    padding: 1rem; /* Más compacto en móviles */
+  }
+
+  .certification-logo {
+    width: 60px; /* Logo más pequeño en móviles */
+    height: 60px;
+  }
+
+  .certification-info h4 {
+    font-size: 1.1rem; /* Texto más pequeño en móviles */
+  }
+}
+
+/* Clientes */
+.clients-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.client-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-item img {
+  max-width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.client-item:hover img {
+  filter: grayscale(0);
+}
+
+/* Contacto */
+.contact-section {
+  padding: 4rem 0;
+  background: var(--deep-blue);
+  color: white;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--executive-black);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.submit-button {
+  background: var(--accent-gold);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: #b08f68;
+}
+
+/* Footer */
+.executive-footer {
+  background: var(--executive-black);
+  color: var(--technical-gray);
+  padding: 3rem 0;
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-badges img {
+  height: 45px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background: var(--executive-black);
+    width: 100%;
+    padding: 2rem;
+    transition: right 0.3s;
+  }
+  
+  .nav-menu.show {
+    right: 0;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .client-item img {
+    max-width: 100px;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
